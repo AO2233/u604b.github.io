@@ -3,20 +3,19 @@
 	<head>
 	<meta name="generator" content="Hugo 0.143.1">
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>帰宅部 | Home </title><meta id="viewport" name="viewport">
-
-	<link rel="stylesheet" href="https://ao2233.github.io/css/fonts.css">
+	<meta name="viewport" content="width=device-width"><title>帰宅部 | Home </title><link rel="stylesheet" href="https://ao2233.github.io/css/fonts.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="https://ao2233.github.io/css/main.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/js/aplayer/APlayer.min.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/js/videojs/video-js.min.css">
+	<link rel="stylesheet" href="https://ao2233.github.io//js/zoom/style.min.css">
 
 	<script src="https://ao2233.github.io/js/aplayer/APlayer.min.js"></script>
 	<script src="https://ao2233.github.io/js/dplayer/DPlayer.min.js"></script>
 	<script src="https://ao2233.github.io/js/videojs/video.min.js"></script>
+	<script src="https://ao2233.github.io/js/zoom/medium-zoom.min.js"></script>
 
 	<script src="https://ao2233.github.io/js/pdfobject.min.js"></script>
 	<script src="https://ao2233.github.io/js/feather.min.js"></script>
-
 	<script src="https://ao2233.github.io/js/collapsible.js"></script>
 
 	
@@ -157,7 +156,7 @@
 
 
 
-<img src="/media/pic/2022/bochii.jpeg" alt="" style="width: 500px; hight:">
+<img src="/media/pic/2022/bochii.jpeg" alt="" style="width: 500px; hight:auto" class="zoom-image" >
 对于长度过长的图片进行合适的缩放，同时也是导入图片的推荐写法。
 对于普通<code>markdown</code>的导入语法，只适合宽度合适的图片<code>（如：16x9）</code></p>
 <div class="collapsible">
@@ -639,35 +638,34 @@ ap = new APlayer({
 </div>
 <h1 id="latex">$\LaTeX$</h1>
 <p>行公式效果：</p>
-<p>$$
+$$
 f(x)=\int_{-\infty}^\infty\widehat f\xi e^{2\pi i\xi x}d\xi
-$$</p>
-<p>$$
+$$$$
 v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)
-$$</p>
-<p>$$
+$$$$
 \sigma \left( \frac{QK^T}{\sqrt{d}} \right) V
-$$</p>
-<p>\begin{equation}
+$$$$
+\begin{equation}
 \begin{CD}
-A @&gt;a&gt;&gt; B \\
-@VbVV @AAcA \\
-C @= D
+   A @>a>> B \\
+   @VbVV @AAcA \\
+   C @= D
 \end{CD}
-\end{equation}</p>
-<p>\begin{equation}
-x = a_0 + \cfrac{1}{a_1
-+ \cfrac{1}{a_2
-+ \cfrac{1}{a_3 + \cfrac{1}{a_4} } } }
-\end{equation}</p>
-<p>内联公式效果：$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$，由$\LaTeX$ 强力驱动</p>
+\end{equation}
+$$$$
+\begin{equation}
+  x = a_0 + \cfrac{1}{a_1 
+          + \cfrac{1}{a_2 
+          + \cfrac{1}{a_3 + \cfrac{1}{a_4} } } }
+\end{equation}
+$$<p>内联公式效果：$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$，由$\LaTeX\$ 强力驱动</p>
 <div class="collapsible">
   <div class="bar"><em>详细说明</em></div>
   <div class="content">
     <p>基于$KaTeX$支持其所有特性，唯一麻烦的问题是根据goldmark的转译规则，需要注意符号转译</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tex" data-lang="tex"><span class="line"><span class="ln">1</span><span class="cl">注意对于 Hugo Goldmark：
-</span></span><span class="line"><span class="ln">2</span><span class="cl">1. 对于单独出现的&#39;<span class="k">\&#39;</span>符号，需要使用转义<span class="k">\\</span>表达
-</span></span><span class="line"><span class="ln">3</span><span class="cl">2. &gt; 需要进行转译，<span class="k">\&gt;</span>, <span class="k">\\</span>, <span class="k">\\</span> -&gt; <span class="k">\\\\</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">对于单独出现的&#39;<span class="k">\&#39;</span>符号，需要使用转义<span class="k">\\</span>表达
+</span></span><span class="line"><span class="ln">3</span><span class="cl">我们可以用passthrough hook来绕过，需要加上 <span class="sb">$$</span><span class="nb"> </span><span class="s">$$</span>
 </span></span></code></pre></div><p>滑动方案：</p>
 <p>隐藏了横向滑动条，PC端使用<code>SHIFT + 滚轮</code>或者<code>触控板</code>操作</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="sb">$$</span><span class="nb"> E </span><span class="o">=</span><span class="nb"> MC^</span><span class="m">2</span><span class="nb"> </span><span class="s">$$</span>
@@ -813,6 +811,11 @@ pie
 <a class="soc" href="mailto:qingao@ruri.waseda.jp" title="Mail"><i data-feather="mail"></i></a>
 </footer><script>
       feather.replace()
+      const images = document.querySelectorAll('.zoom-image');  
+      mediumZoom(images,{
+            background: 'rgba(0, 0, 0, 0.7)', 
+            margin: 0, 
+      });
 </script>
 		</div>
 		
