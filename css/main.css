@@ -2,18 +2,14 @@
 :root{
   --maincolor: red;
   --bordercl:rebeccapurple;
-  --callouctcolor:dodgerblue;
-  --hovercolor:navy;
-  /* --hovercolor:white; */
-  --darkMaincolor: #50fa7b;
-  }
+  --callouctcolor: deepskyblue;;
+  --hovercolor: crimson;
+  --darkcolor: #50fa7b;
+}
   
   body{
     display: block;
     /* margin: 8px; */
-  }
-  * {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   
   ::selection {
@@ -22,12 +18,11 @@
   }
 
   html {
-    color: #232333;
     line-height: 1.5em;
   }
   
   p {
-    line-height: 1.5;
+    line-height: 1.5em;
     /* if you want indent */
     /* text-indent: 2rem; */
   }
@@ -114,11 +109,8 @@
   /* Code blocks */
   code {
     background-color: #f1f1f1;
-    padding: .1em .2em;
-    font-family: 'DOS','DOS-c','Sarasa Mono Slab SC';
-  }
-  
-  p code{
+    padding: .1rem .2rem;
+    margin: 0em .1rem;
     font-family: 'DOS','DOS-c','ZpixA','Sarasa Mono Slab SC';
   }
   
@@ -127,7 +119,6 @@
     line-height: 1.4;
     overflow-x: auto;
     padding: 1em;
-    max-height: 80rem;
     border-radius: 1rem;
   }
 
@@ -152,78 +143,25 @@
     font-size: 100%;
     padding: 0;
     font-family: 'DOS','DOS-c','ZpixA','Sarasa Mono Slab SC';
-    
   }
   .highlight pre ::selection { background:pink; }
 
   /* Containers */
   .content {
-    margin-bottom: 4em;
+    margin-bottom: 5rem; /* footer height, for aplayer*/
     margin-left: auto;
     margin-right: auto;
-    min-width: 375px;
+    /* min-width: 375px; */
     max-width: 1080px;
-    padding: 0 1;
     word-wrap: break-word;
   }
 
-/* 对于过宽画幅采用缩放的方法 */
-  /*
-      800px <= width <= 1115px
-    width = 800px -> display 
-      800 - 800*(2*0.01) = 784
-    grow padding to 15%
-      800 / (1-2*0.20) = 1333px
-    */
-  /* @media screen and (min-width: 800px) and (max-width: 1333px) {
-    .content {
-      padding: 0 auto;
-      width: 784px;
-    }
-  } */
-  /* 
-    width >= 1115px
-    for smooth padding
-  */
-  /* @media screen and (min-width: 1333px) and (max-width: 2178px) {
-    img {
-      padding: 0 auto;
-      max-width: 784px;
-    }
-    .content {padding: 0 20%;}
-  } */
-  /* 
-    0.6*0.4+0.4 = 0.64 
-    784/0.36 = 2178px
-      for pic smooth padding
-  */
-
-  /* @media screen and (min-width: 2178px) {
-    img {
-      max-width: 60%;
-    }
-    .content {padding: 0 20%;}
-  } */
-
-  /* 
-  a = 800
-  b = 1333
-  c = 2178
-  img.width=0.6
-  content.padding=0.2
-  
-  a -> setting the default width
-  b = a/(1-2*p_m)
-  t = (1-2*content.padding)*img.width + 2*content.padding
-  c = b/(1-t)
-  */
- 
   /* Header */
   header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 1em 0;
+    margin: 1rem 0;
   }
   
   header .main {
@@ -252,10 +190,10 @@
   }
   
   /* Common */
-  .title h1 {
+  /* .title h1 {
     margin-bottom: 0;
     margin-top: 0em;
-  }
+  } */
   
   time {
     color: grey;
@@ -266,30 +204,8 @@
     margin-bottom: 1em;
   }
   
-  
-  /* Callout */
-  .callout {
-    background-color: var(--callouctcolor);
-    color: #fff;
-    padding: 1em;
-  }
-  
-  .callout p {
-    font-family: 'ZpixA','Sarasa Mono Slab SC';
-    margin: 0;
-  }
-  
-  .callout a {
-    border-bottom: 3px solid #fff;
-  }
-  
-  .callout a:hover {
-    background-color: #fff;
-    color: var(--callouctcolor);
-  }
-  
   .site-description {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   }
   .tags li::before{
@@ -461,9 +377,6 @@
     color: gray;
   }
   
-  
-  /* ......................... */
-  
     /* LineNumbersTable */  .lnt { color: white }
     /* LineHighlight */  .hl { display: block; width: 100%; background-color: #ffffcc }
   
@@ -542,7 +455,7 @@
     .chroma {
       border-radius: 0;
       background-color: #ececec;
-      padding: 0.25em;
+      padding: 0.8em;
   }
 
   /* *:not(span, pre){
@@ -550,8 +463,8 @@
   } */
 
 /* 引脚设置 */
-a[href^="#fn:"]:before{ content: '[' }
-a[href^="#fn:"]:after{ content: ']' }
+a[href^="#fn:"]:before{ content: '<' }
+a[href^="#fn:"]:after{ content: '>' }
 
 .pagination {
   margin: 0;
@@ -593,6 +506,73 @@ a[href^="#fn:"]:after{ content: ']' }
 	margin-right:auto;
 }
 
-.footnote-ref {
+/* .footnote-ref {
   font-size: 0.75em;
+} */
+
+/* collapsible bar */
+.collapsible {
+  border: 1px solid #444;
+  overflow: hidden;
+  margin: 1rem 0;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.collapsible .bar {
+  padding: 0.6rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  position: relative;
+}
+
+.collapsible .bar::after {
+  content: "↓";
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.3s;
+}
+
+.collapsible .content {
+  display: none;
+  animation: fadeIn 0.5s;
+  margin: 0.5rem;
+}
+
+.collapsible.active > .bar::after {
+  transform: rotate(180deg);
+}
+
+.collapsible.active > .content {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* callout */
+
+.callout {
+  border-left: 0.3rem solid red;
+  background-color: #EEE;
+  padding: 0.1rem 1rem;
+}
+
+/* cat */
+
+.dateDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.digit {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  max-width: 10%;
+  max-height: 10rem;
 }

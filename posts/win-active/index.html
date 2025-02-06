@@ -1,39 +1,29 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<title>Windows KMS激活 - 帰宅部</title><meta id="viewport" name="viewport">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Windows KMS激活 - 帰宅部</title><meta id="viewport" name="viewport">
 
+	<link rel="stylesheet" href="https://ao2233.github.io/css/fonts.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ao2233.github.io/css/main.css">
+	<link rel="stylesheet" href="https://ao2233.github.io/js/aplayer/APlayer.min.css">
+	<link rel="stylesheet" href="https://ao2233.github.io/js/videojs/video-js.min.css">
 
-
-	
-	
-	
-	
-	
-	
-	
-
-	<link rel="stylesheet" href="https://ao2233.github.io/css/fonts.css" >
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ao2233.github.io/css/main.css" />
-	<link rel="stylesheet" href="https://ao2233.github.io/aplayer/APlayer.min.css" >
-	<link rel="stylesheet" href="https://ao2233.github.io/videojs/video-js.min.css" >
-
-	<script src="https://ao2233.github.io/aplayer/APlayer.min.js"></script>
-	<script src="https://ao2233.github.io/dplayer/DPlayer.min.js"></script>
-	<script src="https://ao2233.github.io/videojs/video.min.js"></script>
+	<script src="https://ao2233.github.io/js/aplayer/APlayer.min.js"></script>
+	<script src="https://ao2233.github.io/js/dplayer/DPlayer.min.js"></script>
+	<script src="https://ao2233.github.io/js/videojs/video.min.js"></script>
 
 	<script src="https://ao2233.github.io/js/pdfobject.min.js"></script>
 	<script src="https://ao2233.github.io/js/feather.min.js"></script>
 
+	<script src="https://ao2233.github.io/js/collapsible.js"></script>
+
 	
 	
 	
 	
-	<link rel="stylesheet" href="https://ao2233.github.io/katex/katex.min.css" crossorigin="anonymous">
-	<script defer src="https://ao2233.github.io/katex/katex.min.js" crossorigin="anonymous"></script>
-	<script defer src="https://ao2233.github.io/katex/contrib/auto-render.min.js" crossorigin="anonymous"  onload="renderMathInElement(document.body);"></script>
+	<link rel="stylesheet" href="https://ao2233.github.io/js/katex/katex.min.css" crossorigin="anonymous">
+	<script defer src="https://ao2233.github.io/js/katex/katex.min.js" crossorigin="anonymous"></script>
+	<script defer src="https://ao2233.github.io/js/katex/contrib/auto-render.min.js" crossorigin="anonymous"  onload="renderMathInElement(document.body);"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			renderMathInElement(document.body, {
@@ -49,8 +39,6 @@
 	
 	<script src="https://ao2233.github.io/js/mermaid.min.js"></script>
 
-	
-	
 	<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://ao2233.github.io/css/dark.css" media="(prefers-color-scheme: dark)"/>
 	<script>
 	const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -105,7 +93,9 @@
 		
 		<a href="/" class="sub-main">Home</a>
 		
-		<a href="/posts" class="sub-main">Archives</a>
+		<a href="/posts" class="sub-main">Archive</a>
+		
+		<a href="/tags" class="sub-main">Tag</a>
 		
 		<a href="/about" class="sub-main">About</a>
 		
@@ -120,7 +110,6 @@
 			<h1 class="title">Windows KMS激活</h1>
 			<div class="meta">Posted on Dec 19, 2021</div>
 		</div>
-		
 
 		<section class="body">
 			<h1 id="大魔法">大魔法</h1>
@@ -130,8 +119,7 @@
 <p>模拟器 <strong><a href="https://github.com/Wind4/vlmcsd">vlmcsd</a></strong></p>
 <p>docker 版本 <a href="https://hub.docker.com/r/mikolatero/vlmcsd/">docker-vlmcsd</a></p>
 <blockquote>
-<p>服务器（推荐 docker or WSL）</p>
-</blockquote>
+<p>服务器（推荐 docker or WSL）</p></blockquote>
 <p>官方说明文档 <a href="https://docs.microsoft.com/en-us/windows-server/get-started/kms-client-activation-keys">Key 大全</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">$ which windows-active
 </span></span><span class="line"><span class="ln">2</span><span class="cl">windows-active: aliased to /home/ao/kms/binaries/Linux/intel/static/vlmcsd-x64-musl-static
@@ -139,8 +127,7 @@
 </span></span><span class="line"><span class="ln">4</span><span class="cl">$ which windows-active-test
 </span></span><span class="line"><span class="ln">5</span><span class="cl">windows-active-test: aliased to /home/ao/kms/binaries/Linux/intel/static/vlmcs-x64-musl-static
 </span></span></code></pre></div><blockquote>
-<p>客户端</p>
-</blockquote>
+<p>客户端</p></blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1">#requires -runasadministrator</span>
 </span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="o">[</span>cmdletbinding<span class="o">()]</span>
 </span></span><span class="line"><span class="ln"> 3</span><span class="cl">param<span class="o">(</span>
@@ -160,7 +147,10 @@
 </span></span><span class="line"><span class="ln">17</span><span class="cl">slmgr.vbs -dlv<span class="p">;</span>
 </span></span></code></pre></div><p>注意：授权host不可为<code>127.0.0.1</code></p>
 <h1 id="windows-server-ltsc-versions">Windows Server (LTSC versions)</h1>
-<h1 id="windows-server-2022">Windows Server 2022</h1>
+<div class="collapsible">
+  <div class="bar"><strong>Windows key</strong></div>
+  <div class="content">
+    <h1 id="windows-server-2022">Windows Server 2022</h1>
 <table>
   <thead>
       <tr>
@@ -640,6 +630,8 @@
       </tr>
   </tbody>
 </table>
+  </div>
+</div>
 <h1 id="office-kms-策略">Office KMS 策略</h1>
 <p>激活套件 <a href="https://otp.landian.vip/zh-cn/download.html">Office Tool Plus</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">cd \Program Files\Microsoft Office\Office16
@@ -648,9 +640,11 @@
 </span></span><span class="line"><span class="ln">4</span><span class="cl">cscript ospp.vbs /act
 </span></span><span class="line"><span class="ln">5</span><span class="cl">cscript ospp.vbs /dstatusall
 </span></span></code></pre></div><blockquote>
-<p>版本密钥</p>
-</blockquote>
-<table>
+<p>版本密钥</p></blockquote>
+<div class="collapsible">
+  <div class="bar"><strong>Office key</strong></div>
+  <div class="content">
+    <table>
   <thead>
       <tr>
           <th><strong>版本</strong></th>
@@ -960,6 +954,9 @@
       </tr>
   </tbody>
 </table>
+
+  </div>
+</div>
 <h1 id="在线server">在线server</h1>
 <p><a href="https://moedog.org/1117.html">犬's Blog</a></p>
 <p><a href="https://kms.loli.beer/">kms.loli.beer</a></p>
@@ -967,20 +964,14 @@
 <p>或者暴力修改Bios伪造SLIC表，OEM激活（Windows 7）</p>
 
 		</section>
-
-		<div class="post-tags">
-			
-			
-			
-		</div>
+		
 	</article>
 </main>
 <footer class="footer">
 <hr><a class="soc" href="https://github.com/AO2233" title="GitHub"><i data-feather="github"></i></a>
 <a class="soc" href="https://gitlab.com/AO2233" title="GitLab"><i data-feather="gitlab"></i></a>
-<a class="soc" href="https://www.kaggle.com/ao2233" title="Kaggle"><i data-feather="link"></i></a>
-<a class="soc" href="https://atcoder.jp/users/AO2233" title="Atcoder"><i data-feather="code"></i></a>
-<a class="soc" href="https://leetcode.com/AO2233" title="Leetcode"><i data-feather="hash"></i></a>
+<a class="soc" href="https://twitter.com/u604b" title="Twitter"><i data-feather="twitter"></i></a>
+<a class="soc" href="https://steamcommunity.com/id/u604b" title="Steam"><i data-feather="link"></i></a>
 <a class="soc" href="mailto:qingao@ruri.waseda.jp" title="Mail"><i data-feather="mail"></i></a>
 </footer><script>
       feather.replace()

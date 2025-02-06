@@ -1,5 +1,6 @@
 :root {
-  --mermaid-theme: dark; /*or base, dark, forest, neutral, night */
+  --mermaid-theme: dark;
+  /*or base, dark, forest, neutral, night */
 }
 
 body {
@@ -14,28 +15,31 @@ body {
 }
 
 ::selection {
-  background: var(--darkMaincolor);
+  background: var(--darkcolor);
   color: #fff;
   text-shadow: none;
 }
 
 hr {
-  border-top: 3px dotted blue;
+  border-top: 3px dotted lightcoral;
 }
+
 code {
   background-color: lightblue;
   color: black;
   text-decoration: bold;
   padding: 0.1em 0.2em;
 }
+
 pre {
-  background-color: #202124; 
+  background-color: #202124;
   line-height: 1.4;
   overflow-x: auto;
   padding: 1em;
 }
+
 blockquote {
-  border-color: blue;
+  border-color: palevioletred;
 }
 
 h1,
@@ -46,52 +50,61 @@ h5,
 h6 {
   color: #ddd;
 }
+
 h1::before {
-  color: var(--darkMaincolor);
+  color: var(--darkcolor);
   content: "# ";
 }
+
 h2::before {
-  color: var(--darkMaincolor);
+  color: var(--darkcolor);
   content: "## ";
 }
+
 h3::before {
-  color: var(--darkMaincolor);
+  color: var(--darkcolor);
   content: "### ";
 }
+
 h4::before {
-  color: var(--darkMaincolor);
+  color: var(--darkcolor);
   content: "#### ";
 }
+
 h5::before {
-  color: var(--darkMaincolor);
+  color: var(--darkcolor);
   content: "##### ";
 }
+
 h6::before {
-  color: var(--darkMaincolor);
+  color: var(--darkcolor);
   content: "###### ";
 }
 
 a {
-  border-bottom: 3px solid var(--darkMaincolor);
+  border-bottom: 3px solid var(--darkcolor);
   color: inherit;
 }
+
 a:hover {
-  background-color: var(--darkMaincolor);
+  background-color: var(--darkcolor);
   color: black;
 }
 
 .site-description a {
   color: #ddd;
 }
+
 .site-description a:hover {
   color: black;
 }
 
 .tags a {
-  border-bottom: 3px solid var(--darkMaincolor);
+  border-bottom: 3px solid var(--darkcolor);
 }
+
 .tags a:hover {
-  background-color: var(--darkMaincolor);
+  background-color: var(--darkcolor);
   color: black;
 }
 
@@ -111,58 +124,70 @@ a:hover {
 .soc:hover {
   color: black;
 }
+
 .draft-label {
-  color: var(--darkMaincolor);
+  color: var(--darkcolor);
   background-color: blue;
 }
+
 .highlight pre code[class=language-javaScript]::before,
 .highlight pre code[class="language-js"]::before {
   content: "js";
   background: #f7df1e;
   color: black;
 }
+
 .highlight pre code[class*='language-yml']::before,
 .highlight pre code[class*='language-yaml']::before {
   content: 'yaml';
   background: #f71e6a;
   color: white;
 }
+
 .highlight pre code[class*='language-shell']::before,
 .highlight pre code[class*='language-bash']::before,
 .highlight pre code[class*='language-sh']::before {
   content: 'shell';
   background: green;
-  color:rgb(255, 255, 255)
+  color: rgb(255, 255, 255)
 }
-.highlight pre code[class*='language-json']::before{
+
+.highlight pre code[class*='language-json']::before {
   content: 'json';
   background: dodgerblue;
-   color: #000000 
+  color: #000000
 }
+
 .highlight pre code[class*='language-python']::before,
 .highlight pre code[class*='language-py']::before {
   content: 'py';
   background: blue;
-  color: yellow ;
-}
-.highlight pre code[class*='language-css']::before{
-  content: 'css';
-  background: cyan;
-  color: black ;
-}
-.highlight pre code[class*='language-go']::before{
-  content: 'Go';
-  background: cyan;
-  color: royalblue ;
-}
-.highlight pre code[class*='language-md']::before,
-.highlight pre code[class*='language-md']::before{
-  content: 'Markdown';
-  background: royalblue;
-  color: whitesmoke ;
+  color: yellow;
 }
 
-/* Background */ .chroma { background-color: #1c1c1c }
+.highlight pre code[class*='language-css']::before {
+  content: 'css';
+  background: cyan;
+  color: black;
+}
+
+.highlight pre code[class*='language-go']::before {
+  content: 'Go';
+  background: cyan;
+  color: royalblue;
+}
+
+.highlight pre code[class*='language-md']::before,
+.highlight pre code[class*='language-md']::before {
+  content: 'Markdown';
+  background: royalblue;
+  color: whitesmoke;
+}
+
+/* Background */
+.chroma {
+  background-color: #1c1c1c
+}
 
 .ln {
   color: lightblue;
@@ -180,5 +205,16 @@ a:hover {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #666; 
+  background: #666;
+}
+
+
+.collapsible {
+  border: 1px solid #AAA;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.callout {
+  border-left: 0.3rem solid green;
+  background-color: #333;
 }
