@@ -1,84 +1,69 @@
 :root {
   --mermaid-theme: dark;
-  /*or base, dark, forest, neutral, night */
+  --darkbgcolor: #202124
+  /* base, dark, forest, neutral, night */
 }
 
 body {
   color: white;
-  background-color: #202124;
+  background-color: var(--darkbgcolor);
 }
 
 ::-moz-selection {
-  background: blue;
-  color: #fff;
-  text-shadow: none;
+  background: var(--darkcolor);
+  color: #000;
 }
 
 ::selection {
   background: var(--darkcolor);
-  color: #fff;
-  text-shadow: none;
+  color: #000;
 }
 
 hr {
   border-top: 3px dotted lightcoral;
 }
 
+/* ========== code 会覆盖全局所有的普通code颜色 此处加入pre 还原 ``` 的 ========= */
 code {
   background-color: lightblue;
-  color: black;
-  text-decoration: bold;
-  padding: 0.1em 0.2em;
+  color: var(--darkbgcolor);
 }
 
+pre code {
+  color: white;
+}
+/* =================== */
+
 pre {
-  background-color: #202124;
-  line-height: 1.4;
-  overflow-x: auto;
-  padding: 1em;
+  background-color: var(--darkbgcolor);
 }
 
 blockquote {
   border-color: palevioletred;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #ddd;
-}
-
 h1::before {
   color: var(--darkcolor);
-  content: "# ";
 }
 
 h2::before {
   color: var(--darkcolor);
-  content: "## ";
 }
 
 h3::before {
   color: var(--darkcolor);
-  content: "### ";
 }
 
 h4::before {
   color: var(--darkcolor);
-  content: "#### ";
 }
 
 h5::before {
   color: var(--darkcolor);
-  content: "##### ";
 }
 
 h6::before {
   color: var(--darkcolor);
-  content: "###### ";
 }
 
 a {
@@ -87,23 +72,6 @@ a {
 }
 
 a:hover {
-  background-color: var(--darkcolor);
-  color: black;
-}
-
-.site-description a {
-  color: #ddd;
-}
-
-.site-description a:hover {
-  color: black;
-}
-
-.tags a {
-  border-bottom: 3px solid var(--darkcolor);
-}
-
-.tags a:hover {
   background-color: var(--darkcolor);
   color: black;
 }
@@ -118,9 +86,6 @@ a:hover {
   border-color: #333;
 }
 
-/* .highlight {
-  background-color: #333;
-} */
 .soc:hover {
   color: black;
 }
@@ -130,91 +95,51 @@ a:hover {
   background-color: blue;
 }
 
-.highlight pre code[class=language-javaScript]::before,
-.highlight pre code[class="language-js"]::before {
-  content: "js";
-  background: #f7df1e;
-  color: black;
-}
-
-.highlight pre code[class*='language-yml']::before,
-.highlight pre code[class*='language-yaml']::before {
-  content: 'yaml';
-  background: #f71e6a;
-  color: white;
-}
-
-.highlight pre code[class*='language-shell']::before,
-.highlight pre code[class*='language-bash']::before,
-.highlight pre code[class*='language-sh']::before {
-  content: 'shell';
-  background: green;
-  color: rgb(255, 255, 255)
-}
-
-.highlight pre code[class*='language-json']::before {
-  content: 'json';
-  background: dodgerblue;
-  color: #000000
-}
-
-.highlight pre code[class*='language-python']::before,
-.highlight pre code[class*='language-py']::before {
-  content: 'py';
-  background: blue;
-  color: yellow;
-}
-
-.highlight pre code[class*='language-css']::before {
-  content: 'css';
-  background: cyan;
-  color: black;
-}
-
-.highlight pre code[class*='language-go']::before {
-  content: 'Go';
-  background: cyan;
-  color: royalblue;
-}
-
-.highlight pre code[class*='language-md']::before,
-.highlight pre code[class*='language-md']::before {
-  content: 'Markdown';
-  background: royalblue;
-  color: whitesmoke;
-}
-
-/* Background */
+/* 代码块 */
 .chroma {
   background-color: #1c1c1c
+}
+
+.highlight pre code[class*="language-"]::before {
+  background: whitesmoke;
+  color: black;
 }
 
 .ln {
   color: lightblue;
 }
 
-/* Aplayer 修正 */
+/* Aplayer */
 .aplayer-music .aplayer-title {
   color: #999;
 }
 
+/* 滑动条 */
 ::-webkit-scrollbar-thumb {
   background: #888;
-  border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #666;
 }
 
-
+/* 伸缩 Box */
 .collapsible {
   border: 1px solid #AAA;
   box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 .callout {
-  border-left: 0.3rem solid green;
+  border-left: 0.3rem solid var(--darkcolor);
   background-color: #333;
+}
+
+blockquote {
+  color: #EEE;
+}
+
+.list-item {
+  border-bottom: none;
+  color: #EEE;
+  line-height: 1.7em;
 }

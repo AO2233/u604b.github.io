@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
-	<head>
+
+<html><head>
 	<meta name="generator" content="Hugo 0.143.1">
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width"><title>帰宅部 | Home </title><link rel="stylesheet" href="https://ao2233.github.io/css/fonts.css">
+	<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+	<meta name=viewport content="width=device-width,initial-scale=1"><title>帰宅部 | Home </title><link rel="stylesheet" href="https://ao2233.github.io/css/code_style.css">
+	<link rel="stylesheet" href="https://ao2233.github.io/css/code_light.css">
+	<link rel="stylesheet" href="https://ao2233.github.io/css/fonts.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="https://ao2233.github.io/css/main.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/js/aplayer/APlayer.min.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/js/videojs/video-js.min.css">
@@ -18,80 +21,51 @@
 	<script src="https://ao2233.github.io/js/feather.min.js"></script>
 	<script src="https://ao2233.github.io/js/collapsible.js"></script>
 
-	
-	
-	
-	
 	<link rel="stylesheet" href="https://ao2233.github.io/js/katex/katex.min.css" crossorigin="anonymous">
 	<script defer src="https://ao2233.github.io/js/katex/katex.min.js" crossorigin="anonymous"></script>
-	<script defer src="https://ao2233.github.io/js/katex/contrib/auto-render.min.js" crossorigin="anonymous"  onload="renderMathInElement(document.body);"></script>
+	<script defer src="https://ao2233.github.io/js/katex/contrib/auto-render.min.js" crossorigin="anonymous"
+		onload="renderMathInElement(document.body);"></script>
 	<script>
-		document.addEventListener("DOMContentLoaded", function() {
+		document.addEventListener("DOMContentLoaded", function () {
 			renderMathInElement(document.body, {
 				delimiters: [
-				{left: "$$", right: "$$", display: true},
-			
-				{left: "$", right: "$", display: false},
-			
+					{ left: "$$", right: "$$", display: true },
+					
+					{ left: "$", right: "$", display: false },
+					
 				]
 			});
 		});
 	</script>
-	
+
 	<script src="https://ao2233.github.io/js/mermaid.min.js"></script>
 
-	<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://ao2233.github.io/css/dark.css" media="(prefers-color-scheme: dark)"/>
-	<script>
-	const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-	var config = {
-		startOnLoad:true,
-		flowchart:{
-		useMaxWidth:true,
-		htmlLabels:true,
-		curve:'cardinal',
-		},
-		securityLevel:'loose',
-	};
-	
-	var a=0;
-	function darkModeHandler() {
-		if (mediaQuery.matches) {
-			mermaid.initialize({
-				
-				theme: 'dark',
-				config
-			});
-			if (a>0){
-				document.location.reload(false);
-			}
-			a+=1;
-			
-		} else {
-			mermaid.initialize({
-				
-				theme: 'base',
-				config
-			});
-			if (a>0){
-				document.location.reload(false);
-			}
-			a+=1;
-			
-		}
-	}
-	darkModeHandler()
-	mediaQuery.addListener(darkModeHandler)
+	<link rel="stylesheet" type="text/css" href="https://ao2233.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" type="text/css" href="https://ao2233.github.io/css/code_dark.css" media="(prefers-color-scheme: dark)" />
 
+	
+	<script>
+		const mq = window.matchMedia('(prefers-color-scheme: dark)'),
+			config = { startOnLoad: true, flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'cardinal' }, securityLevel: 'loose' };
+		let inited = false,
+			setTheme = dark => {
+				mermaid.initialize({ theme: dark ? 'dark' : 'base', config });
+				if (inited) location.reload(false);
+				inited = true;
+			};
+
+		setTheme(mq.matches);
+		(mq.addEventListener ? mq.addEventListener : mq.addListener).call(mq, 'change', e => setTheme(e.matches));
 	</script>
 </head>
-
-	<body>
-		<div class="content">
-			<header>
+<body>
+		<div class="content"><header>
 	<div class="main">
 		<a href="https://ao2233.github.io/">帰宅部</a>
 		<link rel="icon" type="image/png" href=https://ao2233.github.io/favicon.ico />
 	</div>
+
+	
 	<nav>
 		
 		<a href="/" class="sub-main">Home</a>
@@ -103,21 +77,20 @@
 		<a href="/about" class="sub-main">About</a>
 		
 
+	
 		
-
 	</nav>
-</header>
-			<main class="list">
-				<div class="site-description"><p>さらば、すべてのエヴァンゲリオン</p></div>
+</header><main class="list">
+				<div class="site-description"><p class="site-description">さらば、すべてのエヴァンゲリオン</p></div>
 
 				
 				
 				
-				
-				<section class="list-item">
-					<h1 class="title">WEB 样式测试</a></h1>
-					<time>Dec 7, 2021</time> 
-					<p>本页面用于<code>Hugo Website</code>界面的功能测试。</p>
+
+				<article>
+				<h1 class="title">WEB 样式测试</a></h1>
+				<time>Dec 7, 2021</time> 
+				<p>本页面用于<code>Hugo Website</code>界面的功能测试。</p>
 <blockquote>
 <p>标题 and (提示栏)</p></blockquote>
 <div class="collapsible">
@@ -156,7 +129,10 @@
 
 
 
+<div style="text-align: center;">
 <img src="/media/pic/2022/bochii.jpeg" alt="" style="width: 500px; hight:auto" class="zoom-image" >
+
+</div>
 对于长度过长的图片进行合适的缩放，同时也是导入图片的推荐写法。
 对于普通<code>markdown</code>的导入语法，只适合宽度合适的图片<code>（如：16x9）</code></p>
 <div class="collapsible">
@@ -593,7 +569,7 @@ ap = new APlayer({
     PDFObject.embed("\/media\/pdf\/Transformer.pdf", "#s", {height:'50rem'}, options);
 </script>
 
-<p>用于大页面的LaTex的加载</p>
+<p>用于大页面的$\LaTeX$的加载</p>
 <div class="collapsible">
   <div class="bar"><em>详细说明</em></div>
   <div class="content">
@@ -658,7 +634,7 @@ $$$$
           + \cfrac{1}{a_2 
           + \cfrac{1}{a_3 + \cfrac{1}{a_4} } } }
 \end{equation}
-$$<p>内联公式效果：$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$，由$\LaTeX\$ 强力驱动</p>
+$$<p>内联公式效果：$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$，由$\LaTeX$ 强力驱动</p>
 <div class="collapsible">
   <div class="bar"><em>详细说明</em></div>
   <div class="content">
@@ -786,8 +762,7 @@ pie
 </ol>
 </div>
 
-				</section>
-				
+				</article>
 				
 
 <ul class="pagination">
@@ -800,10 +775,8 @@ pie
 	
 	</span>
 </ul>
-
-
-			</main>
-			<footer class="footer">
+</main>
+<footer class="footer">
 <hr><a class="soc" href="https://github.com/AO2233" title="GitHub"><i data-feather="github"></i></a>
 <a class="soc" href="https://gitlab.com/AO2233" title="GitLab"><i data-feather="gitlab"></i></a>
 <a class="soc" href="https://twitter.com/u604b" title="Twitter"><i data-feather="twitter"></i></a>
@@ -811,13 +784,13 @@ pie
 <a class="soc" href="mailto:qingao@ruri.waseda.jp" title="Mail"><i data-feather="mail"></i></a>
 </footer><script>
       feather.replace()
+      
       const images = document.querySelectorAll('.zoom-image');  
       mediumZoom(images,{
             background: 'rgba(0, 0, 0, 0.7)', 
             margin: 0, 
       });
-</script>
-		</div>
+</script></div>
 		
 	</body>
 </html>
