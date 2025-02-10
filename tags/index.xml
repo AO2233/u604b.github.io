@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>MIT License</copyright>
-    <lastBuildDate>Fri, 09 Dec 2022 19:22:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2025 00:54:18 +0900</lastBuildDate>
     <atom:link href="https://ao2233.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Daily</title>
+      <link>https://ao2233.github.io/tags/daily/</link>
+      <pubDate>Thu, 30 Jan 2025 00:54:18 +0900</pubDate>
+      <guid>https://ao2233.github.io/tags/daily/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Tech</title>
       <link>https://ao2233.github.io/tags/tech/</link>
