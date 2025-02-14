@@ -2,14 +2,25 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
-	<meta name=viewport content="width=device-width,initial-scale=1"><title>WEB 样式测试 - 帰宅部</title><link rel="stylesheet" href="https://ao2233.github.io/css/code_style.css">
+	<meta name=viewport content="width=device-width,initial-scale=1">
+
+	<title>帰宅部 </title>
+	
+	<link rel="icon" href=https://ao2233.github.io/duck.ico>
+	
+	<link rel="stylesheet" href="https://ao2233.github.io/css/code_style.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/css/code_light.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/css/fonts.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ao2233.github.io/css/main.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/js/aplayer/APlayer.min.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/js/videojs/video-js.min.css">
 	<link rel="stylesheet" href="https://ao2233.github.io//js/zoom/style.min.css">
 
+	<link rel="stylesheet" href="https://ao2233.github.io/css/main.css">
+	<link rel="stylesheet" href="https://ao2233.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" href="https://ao2233.github.io/css/code_dark.css" media="(prefers-color-scheme: dark)" />
+	
+
+	
 	<script src="https://ao2233.github.io/js/aplayer/APlayer.min.js"></script>
 	<script src="https://ao2233.github.io/js/dplayer/DPlayer.min.js"></script>
 	<script src="https://ao2233.github.io/js/videojs/video.min.js"></script>
@@ -18,7 +29,10 @@
 	<script src="https://ao2233.github.io/js/pdfobject.min.js"></script>
 	<script src="https://ao2233.github.io/js/feather.min.js"></script>
 	<script src="https://ao2233.github.io/js/collapsible.js"></script>
+	<script src="https://ao2233.github.io/js/mermaid.min.js"></script>
+	
 
+	
 	<link rel="stylesheet" href="https://ao2233.github.io/js/katex/katex.min.css" crossorigin="anonymous">
 	<script defer src="https://ao2233.github.io/js/katex/katex.min.js" crossorigin="anonymous"></script>
 	<script defer src="https://ao2233.github.io/js/katex/contrib/auto-render.min.js" crossorigin="anonymous"
@@ -35,12 +49,9 @@
 			});
 		});
 	</script>
+	
 
-	<script src="https://ao2233.github.io/js/mermaid.min.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="https://ao2233.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
-	<link rel="stylesheet" type="text/css" href="https://ao2233.github.io/css/code_dark.css" media="(prefers-color-scheme: dark)" />
-
+	
 	
 	<script>
 		const mq = window.matchMedia('(prefers-color-scheme: dark)'),
@@ -55,18 +66,20 @@
 		setTheme(mq.matches);
 		(mq.addEventListener ? mq.addEventListener : mq.addListener).call(mq, 'change', e => setTheme(e.matches));
 	</script>
+
+	
+	
+
 </head>
-<body>
+
+    <body>
         <div class="content"><header>
 	<div class="main">
 		<a href="https://ao2233.github.io/">帰宅部</a>
-		<link rel="icon" type="image/png" href=https://ao2233.github.io/favicon.ico />
 	</div>
 
 	
 	<nav>
-		
-		<a href="/" class="sub-main">Home</a>
 		
 		<a href="/posts" class="sub-main">Archive</a>
 		
@@ -79,6 +92,7 @@
 		
 	</nav>
 </header>
+        
 <main>
 	
 	<div class="title">
@@ -120,18 +134,43 @@
 </span></span><span class="line"><span class="ln">5</span><span class="cl">	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;⑨&#34;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln">6</span><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h1 id="自定义图片">自定义图片</h1>
-<p>
-
-
+</span></span></code></pre></div><blockquote>
+<p>video-loop</p></blockquote>
 
 
 <div style="text-align: center;">
-<img src="/media/pic/2022/bochii.jpeg" alt="" style="width: 500px; hight:auto" class="zoom-image" >
+<video autoplay loop muted playsinline preload="auto" style="max-width: 800px; width: 100%;">
+    <source src="/media/video/2025/magnolia.mp4" type="video/mp4">
+    check the <a href="/media/video/2025/magnolia.mp4">video</a>.
+  </video>
+
+<p style="margin: 0.1rem;"><code>エンダーマグノリア最終戦</code></p>
 
 </div>
-对于长度过长的图片进行合适的缩放，同时也是导入图片的推荐写法。
-对于普通<code>markdown</code>的导入语法，只适合宽度合适的图片<code>（如：16x9）</code></p>
+  
+<div class="collapsible">
+  <div class="bar">样式代码</div>
+  <div class="content">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl">{\{<span class="p">&lt;</span> <span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">/media/video/2025/magnolia.mp4</span> <span class="na">width</span><span class="o">=</span><span class="s">800px</span> <span class="na">caption</span><span class="o">=</span><span class="s">&#34;`エンダーマグノリア最終戦`&#34;</span><span class="p">&gt;</span>}\}
+</span></span></code></pre></div>
+  </div>
+</div>
+<h1 id="自定义图片">自定义图片</h1>
+
+
+
+<div class="masonry-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 0 3px;">
+
+<div class="masonry-gallery-item" style="width: 100%;margin: 0 3px; max-width: 500px">
+<img src="/media/img/2022/bochii.jpeg" class="zoom-image">
+</div>
+
+</div>
+
+<p style="text-align: center;  margin: 0;"><code>ぼっち・ざ・ろっく！</code></p>
+
+<p>图片的布局是极其繁琐的，宽高不同的图片的放置更是地狱。并且希望图片是可以点击放大的。底部有可选的说明文字。</p>
+<p>目前方法，可以放多张图，用<code>半角逗号隔开</code>，<code>但是每次指定一排放置</code>，强迫症患者必须手搓，<code>flex</code>居中。建议同宽度的图片一起放。宽度指定的是单张图片的最大宽度，超过此宽度先变成单列排放，更小的情况单列进行图片缩放。</p>
 <div class="collapsible">
   <div class="bar"><em>详细说明</em></div>
   <div class="content">
@@ -139,11 +178,10 @@
 <p>code</p></blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl">代码为了避开渲染，全部添加 \，语法忘记时复制去掉 \
 </span></span><span class="line"><span class="ln">2</span><span class="cl">
-</span></span><span class="line"><span class="ln">3</span><span class="cl">{\{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/media/abc.png&#34;</span>  <span class="na">width</span><span class="o">=</span><span class="s">&#34;500px&#34;</span> <span class="p">&gt;</span>}\}
-</span></span><span class="line"><span class="ln">4</span><span class="cl">{\{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/media/abc.png&#34;</span>  <span class="na">width</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="p">&gt;</span>}\}
-</span></span><span class="line"><span class="ln">5</span><span class="cl">{\{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/media/abc.png&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;message&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="na">hight</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="p">&gt;</span>}\}
+</span></span><span class="line"><span class="ln">3</span><span class="cl">{\{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/media/abc.png, /media/ss.jpeg&#34;</span>  <span class="na">width</span><span class="o">=</span><span class="s">&#34;500px&#34;</span> <span class="p">&gt;</span>}\}
+</span></span><span class="line"><span class="ln">4</span><span class="cl">{\{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/media/abc.png&#34;</span>  <span class="na">width</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="na">cation</span><span class="o">=</span><span class="s">&#34;说明文字&#34;</span> <span class="p">&gt;</span>}\}
+</span></span><span class="line"><span class="ln">5</span><span class="cl">{\{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/media/abc.png&#34;</span>  <span class="na">width</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="p">&gt;</span>}\}
 </span></span><span class="line"><span class="ln">6</span><span class="cl">网页过宽采用超过一定大小后，向两边padding的做法（大部分网站通用做法），保证纵向大小不变。对于宽度过小的情况，采用等比缩小的策略。
-</span></span><span class="line"><span class="ln">7</span><span class="cl">注意此处的开头的/
 </span></span></code></pre></div>
   </div>
 </div>
@@ -197,8 +235,8 @@ ap = new APlayer({
     audio: [{
         name: 'fly away' ,
         artist: '上原あずみ',
-        url: '\/media\/a\/fly_away.mp3',
-        cover: '\/media\/pic\/2022\/fly.jpg',
+        url: '\/media\/audio\/fly_away.mp3',
+        cover: '\/media\/img\/2022\/fly.jpg',
         autoplay: 'true',
         lrc: 'no lrc'
     }]
@@ -213,8 +251,8 @@ ap = new APlayer({
     audio: [{
         name: 'Inferno' ,
         artist: 'Benjamin \u0026 mpi',
-        url: '\/media\/a\/Inferno.mp3',
-        cover: '\/media\/pic\/2022\/moe.webp',
+        url: '\/media\/audio\/Inferno.mp3',
+        cover: '\/media\/img\/2022\/moe.webp',
         autoplay: 'true',
         lrc: 'no lrc'
     }]
@@ -258,7 +296,7 @@ ap = new APlayer({
     chromecast: true,
     preload: true,
     video: {
-        url: '\/media\/v\/vtest.mp4',
+        url: '\/media\/video\/vtest.mp4',
         
     },
 });
@@ -529,7 +567,7 @@ ap = new APlayer({
 
 <h1 id="bilibili">Bilibili</h1>
 <div align=center class="aspect-ratio">
-    <iframe src="https://player.bilibili.com/player.html?bvid=BV1VG4y1F7Xh&&page=1&as_wide=1&high_quality=1&danmaku=1&autoplay=0" 
+    <iframe src="https://player.bilibili.com/player.html?bvid=BV18X4y1N7Yh&&page=1&as_wide=1&high_quality=1&danmaku=1&autoplay=0" 
     scrolling="no" 
     border="0" 
     frameborder="no" 
@@ -555,15 +593,16 @@ ap = new APlayer({
         </style>
 </div>
 
-<h1 id="pdf-内嵌">pdf 内嵌</h1>
+<p>由于B站的接口，实测用手机端访问，<code>User-agent</code>会导致有的视频无法加载被替换，怀疑与反外链有关</p>
+<h1 id="pdf-内嵌">PDF 内嵌</h1>
 
 
 <div id='s'></div>
 <script>
-    var options = {
-            fallbackLink: "<p>The browser does not support embedded <a href='[url]'>PDF</a> documents. </p>"
-            };
-    PDFObject.embed("\/media\/pdf\/Transformer.pdf", "#s", {height:'50rem'}, options);
+var options = {
+    fallbackLink: "<p>The browser does not support embedded <a href='[url]'>PDF</a> documents. </p>"
+    };
+PDFObject.embed("\/media\/pdf\/Transformer.pdf", "#s", {height:'70em'}, options);
 </script>
 
 <p>用于大页面的$\LaTeX$的加载</p>
@@ -572,24 +611,20 @@ ap = new APlayer({
   <div class="content">
     <blockquote>
 <p>code</p></blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl">{\{<span class="p">&lt;</span> <span class="nt">pdf</span> <span class="na">id</span><span class="o">=</span><span class="s">s</span> <span class="na">path</span><span class="o">=</span><span class="s">/media/pdf/Transformer.pdf</span> <span class="p">&gt;</span>}\}
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c">&lt;!-- &lt;div&gt;
-</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="c">    &lt;iframe height=&#39;{{- .Get `h` | default `auto` -}}&#39; height=&#34;auto&#34; src=&#39;{{ .Site.BaseURL  }}{{- .Get `path` -}}&#39; type=&#34;application/pdf&#34; width=&#34;100%&#34;&gt;&lt;/iframe&gt;
-</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="c">&lt;/div&gt; --&gt;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="c">&lt;!-- 不可纯数字 --&gt;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;a{{- .Get `id` -}}&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">            <span class="nx">fallbackLink</span><span class="o">:</span> <span class="s2">&#34;&lt;p&gt;can&#39;t show PDF in this browser  &lt;a href=&#39;[url]&#39;&gt;download it&lt;/a&gt;&lt;/p&gt;&#34;</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl">            <span class="p">};</span>
-</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="nx">PDFObject</span><span class="p">.</span><span class="nx">embed</span><span class="p">(</span><span class="s2">&#34;{{ .Site.BaseURL  }}{{- .Get `path` -}}&#34;</span><span class="p">,</span> <span class="s2">&#34;#a{{- .Get `id` -}}&#34;</span><span class="p">,</span> <span class="p">{</span><span class="nx">height</span><span class="o">:</span><span class="s1">&#39;{{- .Get `h` | default `50rem` -}}&#39;</span><span class="p">},</span> <span class="nx">options</span><span class="p">);</span>
-</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">
-</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="c">&lt;!--
-</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="c">A 不出来（WebKit引擎）的时候，使用fallbackLink
-</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="c">--&gt;</span>
-</span></span><span class="line"><span class="ln">17</span><span class="cl">{\{<span class="p">&lt;</span> <span class="nt">pdf</span> <span class="na">id</span><span class="o">=</span><span class="s">s</span> <span class="na">path</span><span class="o">=</span><span class="s">/media/pdf/f@ckTeX.pdf</span> <span class="p">&gt;</span>}\}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl">{\{<span class="p">&lt;</span> <span class="nt">pdf</span> <span class="na">id</span><span class="o">=</span><span class="s">s</span> <span class="na">src</span><span class="o">=</span><span class="s">/media/pdf/Transformer.pdf</span> <span class="p">&gt;</span>}\}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c">&lt;!-- 不可纯数字 --&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;{{- .Get `id` -}}&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">            <span class="nx">fallbackLink</span><span class="o">:</span> <span class="s2">&#34;&lt;p&gt;This browser don&#39;t support embeded PDFs. &lt;a href=&#39;[url]&#39;&gt;Download it&lt;/a&gt;&lt;/p&gt;&#34;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">            <span class="p">};</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="nx">PDFObject</span><span class="p">.</span><span class="nx">embed</span><span class="p">(</span><span class="s2">&#34;{{ .Site.BaseURL  }}{{- .Get `path` -}}&#34;</span><span class="p">,</span> <span class="s2">&#34;#a{{- .Get `id` -}}&#34;</span><span class="p">,</span> <span class="p">{</span><span class="nx">height</span><span class="o">:</span><span class="s1">&#39;{{- .Get `h` | default `50rem` -}}&#39;</span><span class="p">},</span> <span class="nx">options</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c">&lt;!--
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="c">引擎不支持的时候，使用fallback，给出Link
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="c">--&gt;</span>
 </span></span></code></pre></div>
   </div>
 </div>
@@ -764,13 +799,19 @@ pie
 </main>
 
 <footer class="footer">
-<hr><a class="soc" href="https://github.com/AO2233" title="GitHub"><i data-feather="github"></i></a>
+<hr>
+<a class="soc" href="https://github.com/AO2233" title="GitHub"><i data-feather="github"></i></a>
+
 <a class="soc" href="https://gitlab.com/AO2233" title="GitLab"><i data-feather="gitlab"></i></a>
-<a class="soc" href="https://twitter.com/u604b" title="Twitter"><i data-feather="twitter"></i></a>
-<a class="soc" href="https://steamcommunity.com/id/u604b" title="Steam"><i data-feather="link"></i></a>
-<a class="soc" href="mailto:qingao@ruri.waseda.jp" title="Mail"><i data-feather="mail"></i></a>
+
+<a class="soc" href="https://steamcommunity.com/id/u604b" title="Steam"><i data-feather="hash"></i></a>
+
+<a class="soc" href="https://x.com/u604b" title="Twitter"><i data-feather="twitter"></i></a>
+
+<a class="soc" href="https://marshmallow-qa.com/wwim0saksuvot4v" title="Message Box"><i data-feather="mail"></i></a>
 </footer><script>
-      feather.replace()
+      feather.replace();
+      
       
       const images = document.querySelectorAll('.zoom-image');  
       mediumZoom(images,{

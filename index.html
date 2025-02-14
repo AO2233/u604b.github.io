@@ -4,14 +4,25 @@
 	<meta name="generator" content="Hugo 0.143.1">
 	<meta charset="utf-8" />
 	<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
-	<meta name=viewport content="width=device-width,initial-scale=1"><title>帰宅部 | Home </title><link rel="stylesheet" href="https://ao2233.github.io/css/code_style.css">
+	<meta name=viewport content="width=device-width,initial-scale=1">
+
+	<title>帰宅部 </title>
+	
+	<link rel="icon" href=https://ao2233.github.io/duck.ico>
+	
+	<link rel="stylesheet" href="https://ao2233.github.io/css/code_style.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/css/code_light.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/css/fonts.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ao2233.github.io/css/main.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/js/aplayer/APlayer.min.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/js/videojs/video-js.min.css">
 	<link rel="stylesheet" href="https://ao2233.github.io//js/zoom/style.min.css">
 
+	<link rel="stylesheet" href="https://ao2233.github.io/css/main.css">
+	<link rel="stylesheet" href="https://ao2233.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" href="https://ao2233.github.io/css/code_dark.css" media="(prefers-color-scheme: dark)" />
+	
+
+	
 	<script src="https://ao2233.github.io/js/aplayer/APlayer.min.js"></script>
 	<script src="https://ao2233.github.io/js/dplayer/DPlayer.min.js"></script>
 	<script src="https://ao2233.github.io/js/videojs/video.min.js"></script>
@@ -20,7 +31,10 @@
 	<script src="https://ao2233.github.io/js/pdfobject.min.js"></script>
 	<script src="https://ao2233.github.io/js/feather.min.js"></script>
 	<script src="https://ao2233.github.io/js/collapsible.js"></script>
+	<script src="https://ao2233.github.io/js/mermaid.min.js"></script>
+	
 
+	
 	<link rel="stylesheet" href="https://ao2233.github.io/js/katex/katex.min.css" crossorigin="anonymous">
 	<script defer src="https://ao2233.github.io/js/katex/katex.min.js" crossorigin="anonymous"></script>
 	<script defer src="https://ao2233.github.io/js/katex/contrib/auto-render.min.js" crossorigin="anonymous"
@@ -37,12 +51,9 @@
 			});
 		});
 	</script>
+	
 
-	<script src="https://ao2233.github.io/js/mermaid.min.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="https://ao2233.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
-	<link rel="stylesheet" type="text/css" href="https://ao2233.github.io/css/code_dark.css" media="(prefers-color-scheme: dark)" />
-
+	
 	
 	<script>
 		const mq = window.matchMedia('(prefers-color-scheme: dark)'),
@@ -57,18 +68,19 @@
 		setTheme(mq.matches);
 		(mq.addEventListener ? mq.addEventListener : mq.addListener).call(mq, 'change', e => setTheme(e.matches));
 	</script>
+
+	
+	
+
 </head>
 <body>
 		<div class="content"><header>
 	<div class="main">
 		<a href="https://ao2233.github.io/">帰宅部</a>
-		<link rel="icon" type="image/png" href=https://ao2233.github.io/favicon.ico />
 	</div>
 
 	
 	<nav>
-		
-		<a href="/" class="sub-main">Home</a>
 		
 		<a href="/posts" class="sub-main">Archive</a>
 		
@@ -88,89 +100,88 @@
 				
 
 				<article>
-				<h1 class="title">2024总结</a></h1>
-				<time>Jan 30, 2025 <span class="draft-label">DRAFT</span> </time> 
-				<p>今年实在是太多应该写，但是面对着<code>vscode</code>我又啥也写不出来了，哈哈。上次写还是几年前，顺便修了下<code>hugo</code>模版。</p>
+				<h1 class="title">Large Language Model 那些事</a></h1>
+				<time>Feb 10, 2025 <span class="draft-label">DRAFT</span> </time> 
+				<h1 id="前言">前言</h1>
+<p>最近，<code>LLM</code>炒的甚是火热，于是也来写一篇<code>blog</code>记录下。训练搞不了，只能做做<code>RAG</code>&amp;<code>Prompt Pipeline</code>这种下游工程了，再就是结合<code>API</code>解决业务</p>
 <div class="collapsible">
-  <div class="bar">无聊碎碎念草稿</div>
+  <div class="bar">未完待续</div>
   <div class="content">
-    <p>首先，让我们来看看年度音乐：</p>
-<!-- 
-<iframe allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="allowfullscreen" class="spotify spotify-track" id="h-sc-spotify-0" loading="lazy" src="https://open.spotify.com/embed/track/2cxcqKwQtfKq7giphxjzOu?theme=1" style="width: 100%; height: 152px; border: none;"></iframe> -->
-<blockquote>
-<p>Spotify</p></blockquote>
-<iframe allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="allowfullscreen" class="spotify spotify-playlist" id="h-sc-spotify-1" loading="lazy" src="https://open.spotify.com/embed/playlist/37i9dQZF1FoAyFii1PuqBt?theme=1" style="width: 100%; height: 380px; border: none;"></iframe>
-<p>论冲击力，还得是这首：</p>
-<div id="1"></div>
-<script>
-ap = new APlayer({
-    container: document.getElementById('1'),
-    fixed: '',
-    audio: [{
-        name: '借月' ,
-        artist: '王天阳',
-        url: 'media\/a\/借月.mp3',
-        cover: '\/media\/pic\/2025\/c.jpg',
-        autoplay: 'true',
-        lrc: 'no lrc'
-    }]
-});
-</script>
-<h1 id="活动时间表">活动时间表</h1>
-<table>
-  <thead>
-      <tr>
-          <th><code>时间</code></th>
-          <th><code>通常状态</code></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>3:00</td>
-          <td>关机，准备睡觉</td>
-      </tr>
-      <tr>
-          <td>10:30</td>
-          <td>华丽丽之自然醒</td>
-      </tr>
-      <tr>
-          <td>11:00</td>
-          <td>洗漱 + 清理房间</td>
-      </tr>
-      <tr>
-          <td>11:40</td>
-          <td>看看<code>paper</code></td>
-      </tr>
-      <tr>
-          <td>12:30</td>
-          <td>中饭大转盘 -&gt; <code>咖喱/拉面/Costco/吉野家</code></td>
-      </tr>
-      <tr>
-          <td>13:40</td>
-          <td><code>回家开躺</code></td>
-      </tr>
-      <tr>
-          <td>18:00</td>
-          <td>晚饭大转盘 = <code>i in set(选择) and not(中饭)</code></td>
-      </tr>
-      <tr>
-          <td>19:30</td>
-          <td><code>回家开躺</code></td>
-      </tr>
-      <tr>
-          <td>22:30</td>
-          <td>躺入浴缸</td>
-      </tr>
-      <tr>
-          <td>24:00</td>
-          <td>小说 &amp; Youtube时间</td>
-      </tr>
-  </tbody>
-</table>
-<p>先躺咯。</p>
+    <h1 id="large-language-model-结构">Large Language Model 结构</h1>
+<p>TODO: transformer, GPT, zero from hero</p>
+<h2 id="应用">应用</h2>
+<h1 id="言语翻译">言语翻译</h1>
+<p>TODO: trick word, style, pipline</p>
+<h1 id="代码生成">代码生成</h1>
+<p>TODO: 插件，质量</p>
+<h1 id="flow构建">Flow构建</h1>
+<p>TODO: dify, langfuse, langchain</p>
+<h1 id="rag">RAG</h1>
+<p>TODO: 最小实例
+x的图</p>
+<h1 id="atcoder-大挑战">Atcoder 大挑战</h1>
+<p>结果：水色</p>
+<h2 id="app-现状">App 现状</h2>
+<h1 id="serverframework">Server、Framework</h1>
+<p>ollama, langchain, vllm, llamaindex</p>
+<h1 id="client">Client</h1>
+<p>cherry-studio and so-on</p>
 
   </div>
 </div>
+<h1 id="关于论文研究">关于论文研究</h1>
+<p>老板问到：<code>LLM</code>能用在哪里，感觉不太可靠。本人是想把<code>LLM</code>缝合进<code>机器人任务规划</code>以及<code>错误恢复策略中</code>。类似于各厂的语音助手，既然能有<code>Apple Intelligence</code>，怎么就不能有<code>Robot Intelligence</code>。前者有<code>Agent</code>调用<code>系统API</code>实现任务完成，或者用来操控电脑，后者能否自建动作库，<code>Agent</code>调用动作库来完成实现任务呢。</p>
+<p>但是，一套实验弄下来，发现没有核心技术几乎全靠<code>Trick</code>。首先，计算机里的任务基本都可以拆分成固定的<code>API</code>，并且<code>API</code>成功率极高，失败状态较少，现实环境复杂程度远超想象，单是环境识别就足够研究。另动作失败概率也较大。导致最后<code>LLM</code>的作用与其说是规划器不如说是目标与动作提取器。又因为涉及到硬件的东西又极其昂贵，目前做的动作仅有抓取</p>
+
+
+
+<div class="masonry-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 0 3px;">
+
+<div class="masonry-gallery-item" style="width: 100%;margin: 0 3px; max-width: 800px">
+<img src="/media/img/2025/bin1.png" class="zoom-image">
+</div>
+
+</div>
+
+<p style="text-align: center;  margin: 0;"><code>物体抓取</code></p>
+
+
+
+
+<div class="masonry-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 0 3px;">
+
+<div class="masonry-gallery-item" style="width: 100%;margin: 0 3px; max-width: 800px">
+<img src="/media/img/2025/bin2.png" class="zoom-image">
+</div>
+
+</div>
+
+<p style="text-align: center;  margin: 0;"><code>物品调度</code></p>
+
+<p>于是，分割成两个部分</p>
+<ul>
+<li>设计<code>Prompt</code>来用<code>LLM</code>分解任务解析为<code>动作API</code>，并考虑如何结合环境多模态。现有论文能reproduce出完整结果的少之又少，很多都是某个模型（比如 <code>GPT4</code>）效果还可以，但是换个别的，比如<code>GPT-4o</code>就原地爆炸，明明后者性能更好</li>
+<li>运用各种方法，构建动作库，比如传统算法+<code>slam</code>做导航，<code>GraspNet</code>配合3D点云做抓取，强化学习弄动作姿态等等。只要能<code>work</code>就行。像设计API一样，如果都是不可抢断的任务的话，<code>线性执行</code>的情况只需考虑<code>传入参数</code>和结果就行了</li>
+</ul>
+
+
+
+<div class="masonry-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 0 3px;">
+
+<div class="masonry-gallery-item" style="width: 100%;margin: 0 3px; max-width: 800px">
+<img src="/media/img/2025/llm.png" class="zoom-image">
+</div>
+
+</div>
+
+<p style="text-align: center;  margin: 0;"><code>饼学奥义</code></p>
+
+<p>另外如同大部分人的观点一般，<code>Prompt Engineer</code>就那几套，没必要写成<code>paper</code>，浪费纸张。</p>
+<p>OpenAI之前发布会放的，无人机拍照的demo，也是短程任务，因此我觉得我这个自己想的题啊，成功率堪忧，目前仿真的效果就真挺一般的，对于一个普通任务而言，先用<code>LLM</code>做一次大的分解，再用执行器去执行<code>Decomposed Task</code></p>
+$$
+n=num(LLM(task)) \\
+rate_{task} = \prod_{i}^n rate_{planer_{i}} * rate_{action_{i}}
+$$<p>这成功率只能说是感动人心，问题还是硬件最大，其次是模型。尤其是当<code>Reasoning Model</code>出来之后，也许这种<code>分解task</code>的方法，比直接代码生成的方案要好</p>
 
 				</article>
 				
@@ -187,13 +198,19 @@ ap = new APlayer({
 </ul>
 </main>
 <footer class="footer">
-<hr><a class="soc" href="https://github.com/AO2233" title="GitHub"><i data-feather="github"></i></a>
+<hr>
+<a class="soc" href="https://github.com/AO2233" title="GitHub"><i data-feather="github"></i></a>
+
 <a class="soc" href="https://gitlab.com/AO2233" title="GitLab"><i data-feather="gitlab"></i></a>
-<a class="soc" href="https://twitter.com/u604b" title="Twitter"><i data-feather="twitter"></i></a>
-<a class="soc" href="https://steamcommunity.com/id/u604b" title="Steam"><i data-feather="link"></i></a>
-<a class="soc" href="mailto:qingao@ruri.waseda.jp" title="Mail"><i data-feather="mail"></i></a>
+
+<a class="soc" href="https://steamcommunity.com/id/u604b" title="Steam"><i data-feather="hash"></i></a>
+
+<a class="soc" href="https://x.com/u604b" title="Twitter"><i data-feather="twitter"></i></a>
+
+<a class="soc" href="https://marshmallow-qa.com/wwim0saksuvot4v" title="Message Box"><i data-feather="mail"></i></a>
 </footer><script>
-      feather.replace()
+      feather.replace();
+      
       
       const images = document.querySelectorAll('.zoom-image');  
       mediumZoom(images,{

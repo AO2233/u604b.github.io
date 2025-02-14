@@ -2,14 +2,25 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
-	<meta name=viewport content="width=device-width,initial-scale=1"><title>学术小飞机 - 帰宅部</title><link rel="stylesheet" href="https://ao2233.github.io/css/code_style.css">
+	<meta name=viewport content="width=device-width,initial-scale=1">
+
+	<title>帰宅部 </title>
+	
+	<link rel="icon" href=https://ao2233.github.io/duck.ico>
+	
+	<link rel="stylesheet" href="https://ao2233.github.io/css/code_style.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/css/code_light.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/css/fonts.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ao2233.github.io/css/main.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/js/aplayer/APlayer.min.css">
 	<link rel="stylesheet" href="https://ao2233.github.io/js/videojs/video-js.min.css">
 	<link rel="stylesheet" href="https://ao2233.github.io//js/zoom/style.min.css">
 
+	<link rel="stylesheet" href="https://ao2233.github.io/css/main.css">
+	<link rel="stylesheet" href="https://ao2233.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" href="https://ao2233.github.io/css/code_dark.css" media="(prefers-color-scheme: dark)" />
+	
+
+	
 	<script src="https://ao2233.github.io/js/aplayer/APlayer.min.js"></script>
 	<script src="https://ao2233.github.io/js/dplayer/DPlayer.min.js"></script>
 	<script src="https://ao2233.github.io/js/videojs/video.min.js"></script>
@@ -18,7 +29,10 @@
 	<script src="https://ao2233.github.io/js/pdfobject.min.js"></script>
 	<script src="https://ao2233.github.io/js/feather.min.js"></script>
 	<script src="https://ao2233.github.io/js/collapsible.js"></script>
+	<script src="https://ao2233.github.io/js/mermaid.min.js"></script>
+	
 
+	
 	<link rel="stylesheet" href="https://ao2233.github.io/js/katex/katex.min.css" crossorigin="anonymous">
 	<script defer src="https://ao2233.github.io/js/katex/katex.min.js" crossorigin="anonymous"></script>
 	<script defer src="https://ao2233.github.io/js/katex/contrib/auto-render.min.js" crossorigin="anonymous"
@@ -35,12 +49,9 @@
 			});
 		});
 	</script>
+	
 
-	<script src="https://ao2233.github.io/js/mermaid.min.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="https://ao2233.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
-	<link rel="stylesheet" type="text/css" href="https://ao2233.github.io/css/code_dark.css" media="(prefers-color-scheme: dark)" />
-
+	
 	
 	<script>
 		const mq = window.matchMedia('(prefers-color-scheme: dark)'),
@@ -55,18 +66,20 @@
 		setTheme(mq.matches);
 		(mq.addEventListener ? mq.addEventListener : mq.addListener).call(mq, 'change', e => setTheme(e.matches));
 	</script>
+
+	
+	
+
 </head>
-<body>
+
+    <body>
         <div class="content"><header>
 	<div class="main">
 		<a href="https://ao2233.github.io/">帰宅部</a>
-		<link rel="icon" type="image/png" href=https://ao2233.github.io/favicon.ico />
 	</div>
 
 	
 	<nav>
-		
-		<a href="/" class="sub-main">Home</a>
 		
 		<a href="/posts" class="sub-main">Archive</a>
 		
@@ -79,6 +92,7 @@
 		
 	</nav>
 </header>
+        
 <main>
 	
 	<div class="title">
@@ -99,21 +113,25 @@
 </span></span></code></pre></div><p>
 
 
+<div class="masonry-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 0 3px;">
 
-
-<div style="text-align: center;">
-<img src="/media/pic/2022/cf1.png" alt="" style="width: 800px; hight:auto" class="zoom-image" >
+<div class="masonry-gallery-item" style="width: 100%;margin: 0 3px; max-width: 800px">
+<img src="/media/img/2022/cf1.png" class="zoom-image">
+</div>
 
 </div>
 
 
 
 
+<div class="masonry-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 0 3px;">
 
-<div style="text-align: center;">
-<img src="/media/pic/2022/nc1.png" alt="" style="width: 800px; hight:auto" class="zoom-image" >
+<div class="masonry-gallery-item" style="width: 100%;margin: 0 3px; max-width: 800px">
+<img src="/media/img/2022/nc1.png" class="zoom-image">
+</div>
 
-</div></p>
+</div>
+</p>
 <h1 id="cloudflare-优选">Cloudflare 优选</h1>
 <p>指定解析<code>Cloudflare</code>到一个速度最快的ip，<a href="https://github.com/XIU2/CloudflareSpeedTest">优选工具</a>。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">./CloudflareST -n <span class="m">1000</span> -url https://speed.cloudflare.com/__down<span class="se">\?</span>bytes<span class="se">\=</span><span class="m">200000000</span>
@@ -123,13 +141,19 @@
 </main>
 
 <footer class="footer">
-<hr><a class="soc" href="https://github.com/AO2233" title="GitHub"><i data-feather="github"></i></a>
+<hr>
+<a class="soc" href="https://github.com/AO2233" title="GitHub"><i data-feather="github"></i></a>
+
 <a class="soc" href="https://gitlab.com/AO2233" title="GitLab"><i data-feather="gitlab"></i></a>
-<a class="soc" href="https://twitter.com/u604b" title="Twitter"><i data-feather="twitter"></i></a>
-<a class="soc" href="https://steamcommunity.com/id/u604b" title="Steam"><i data-feather="link"></i></a>
-<a class="soc" href="mailto:qingao@ruri.waseda.jp" title="Mail"><i data-feather="mail"></i></a>
+
+<a class="soc" href="https://steamcommunity.com/id/u604b" title="Steam"><i data-feather="hash"></i></a>
+
+<a class="soc" href="https://x.com/u604b" title="Twitter"><i data-feather="twitter"></i></a>
+
+<a class="soc" href="https://marshmallow-qa.com/wwim0saksuvot4v" title="Message Box"><i data-feather="mail"></i></a>
 </footer><script>
-      feather.replace()
+      feather.replace();
+      
       
       const images = document.querySelectorAll('.zoom-image');  
       mediumZoom(images,{
