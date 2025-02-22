@@ -52,7 +52,6 @@
 	
 
 	
-	
 	<script>
 		const mq = window.matchMedia('(prefers-color-scheme: dark)'),
 			config = { startOnLoad: true, flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'cardinal' }, securityLevel: 'loose' };
@@ -65,6 +64,16 @@
 
 		setTheme(mq.matches);
 		(mq.addEventListener ? mq.addEventListener : mq.addListener).call(mq, 'change', e => setTheme(e.matches));
+	</script>
+
+	<script>
+		window.addEventListener('scroll', function() {
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+		var clientHeight = document.documentElement.clientHeight || window.innerHeight;
+		var scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+		document.getElementById('progress-bar').style.width = scrollPercent + '%';
+		});
 	</script>
 
 	
@@ -92,6 +101,13 @@
 		
 	</nav>
 </header>
+
+
+
+<div id="progress-container">
+	<div id="progress-bar"></div>
+</div>
+<div class="content">
         
 <main>
 	
@@ -159,17 +175,20 @@ ap = new APlayer({
 
 <a class="soc" href="https://x.com/u604b" title="Twitter"><i data-feather="twitter"></i></a>
 
-<a class="soc" href="https://marshmallow-qa.com/wwim0saksuvot4v" title="Message Box"><i data-feather="mail"></i></a>
-</footer><script>
+<a class="soc" href="mailto:ao.debian@gmail.com" title="Mail"><i data-feather="mail"></i></a>
+</footer>
+
+<script>
       feather.replace();
-      
       
       const images = document.querySelectorAll('.zoom-image');  
       mediumZoom(images,{
             background: 'rgba(0, 0, 0, 0.7)', 
             margin: 0, 
       });
-</script></div>
+</script>
+
+</div>
     </body>
     
 </html>

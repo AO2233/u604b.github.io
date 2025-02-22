@@ -52,7 +52,6 @@
 	
 
 	
-	
 	<script>
 		const mq = window.matchMedia('(prefers-color-scheme: dark)'),
 			config = { startOnLoad: true, flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'cardinal' }, securityLevel: 'loose' };
@@ -65,6 +64,16 @@
 
 		setTheme(mq.matches);
 		(mq.addEventListener ? mq.addEventListener : mq.addListener).call(mq, 'change', e => setTheme(e.matches));
+	</script>
+
+	<script>
+		window.addEventListener('scroll', function() {
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+		var clientHeight = document.documentElement.clientHeight || window.innerHeight;
+		var scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+		document.getElementById('progress-bar').style.width = scrollPercent + '%';
+		});
 	</script>
 
 	
@@ -92,25 +101,65 @@
 		
 	</nav>
 </header>
-        
-<main>
-	
-	<div class="title">
-		<h1 class="title">flag</h1>
-		<div class="meta">Posted on Feb 11, 2025</div>
-	</div>
-	<section class="body">
-	<article>
-		<blockquote>
-<p>2025/02/11</p></blockquote>
-<p>发现一篇好<a href="https://github.com/simplescaling/s1">论文</a>，尝试复现。预计用时间换效果的方法会成为主流。</p>
-<blockquote>
-<p>2025/02/14</p></blockquote>
-<p>睡不着、起来抄辞典了。</p>
 
-	</article>
-	</section>
-</main>
+
+
+<div id="progress-container">
+	<div id="progress-bar"></div>
+</div>
+<div class="content">
+        
+  
+    <h2 class="page-title">Posts</h1>
+  
+
+  <main class="list">
+    
+    
+    
+      <h1 class="year-heading">2025</h2>
+      
+        <section>
+          <a class="list-item" href="/flag/01/">随便写写</a>
+          <span class="meta">
+            Feb 11, 2025
+            
+          </span>
+        </section>
+      
+        <section>
+          <a class="list-item" href="/flag/2024/">我的2024</a>
+          <span class="meta">
+            Jan 30, 2025
+             <span class="draft-label">DRAFT</span> 
+          </span>
+        </section>
+      
+    
+      <h1 class="year-heading">2022</h2>
+      
+        <section>
+          <a class="list-item" href="/flag/hb/">往事如烟</a>
+          <span class="meta">
+            Apr 28, 2022
+            
+          </span>
+        </section>
+      
+    
+    
+    
+
+<ul class="pagination">
+	<span class="page-item page-prev">
+	
+	</span>
+	<span class="page-item page-next">
+	
+	</span>
+</ul>
+
+  </main>
 
 <footer class="footer">
 <hr>
@@ -122,17 +171,20 @@
 
 <a class="soc" href="https://x.com/u604b" title="Twitter"><i data-feather="twitter"></i></a>
 
-<a class="soc" href="https://marshmallow-qa.com/wwim0saksuvot4v" title="Message Box"><i data-feather="mail"></i></a>
-</footer><script>
+<a class="soc" href="mailto:ao.debian@gmail.com" title="Mail"><i data-feather="mail"></i></a>
+</footer>
+
+<script>
       feather.replace();
-      
       
       const images = document.querySelectorAll('.zoom-image');  
       mediumZoom(images,{
             background: 'rgba(0, 0, 0, 0.7)', 
             margin: 0, 
       });
-</script></div>
+</script>
+
+</div>
     </body>
     
 </html>
